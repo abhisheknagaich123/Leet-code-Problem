@@ -1,24 +1,41 @@
-import java.util.Scanner;
+/* Java code to generate all possible subsequences.
+	Time Complexity O(n * 2^n) */
 
-public class leetcode {
-    public static void main(String[] args) {
-        int arr[]={1,1,0,0,0,2,5,6};
-        int count=0;
-        int sum=0;
-        int add=0;
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i]==1){
-                count++;
+import java.math.BigInteger;
+
+class leetcode
+{
+    static int arr[] = new int[]{1, 2, 3, 4};
+
+    static void printSubsequences(int n)
+    {
+        /* Number of subsequences is (2**n -1)*/
+        int opsize = (int)Math.pow(2, n);
+
+        /* Run from counter 000..1 to 111..1*/
+        for (int counter = 1; counter < opsize; counter++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+				/* Check if jth bit in the counter is set
+					If set then print jth element from arr[] */
+
+                if (BigInteger.valueOf(counter).testBit(j))
+
+
+                    for ( j = 1; j <arr.length ; ++j) {
+                        arr[j]+=arr[j-1];
+                    }
+                System.out.print(arr[j]);
             }
-            if (arr[i]==0){
-                sum++;
-            }
-            if(arr[i]>=1){
-               add+=arr[i];
-            }
+            System.out.println();
         }
-        System.out.println(count);
-        System.out.println(sum);
-        System.out.println(add);
+    }
+
+    // Driver method to test the above function
+    public static void main(String[] args)
+    {
+        System.out.println("All Non-empty Subsequences");
+        printSubsequences(arr.length);
     }
 }
