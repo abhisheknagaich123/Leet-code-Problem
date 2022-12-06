@@ -23,7 +23,7 @@ public class Quick_sort {
     }
     static void quickSort(int[] arr, int p, int q)
     {
-       
+
         if (p < q)
         {
             int pi = partition(arr, p, q);
