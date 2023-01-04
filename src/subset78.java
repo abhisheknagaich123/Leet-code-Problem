@@ -20,7 +20,7 @@ public class subset78 {
 
     public static void main(String[] args) {
         subset78 obj=new subset78();
-        
+
 
     }
 }
