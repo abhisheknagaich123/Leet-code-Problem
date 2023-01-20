@@ -3,10 +3,11 @@ import java.util.*;
 public class Insert_Delete_GetRandom380 {
     HashMap<Integer ,Integer > hashMap;
     List<Integer> list;
-    public RandomizedSet() {
-        hashMap =new HashMap<>();
-               list = new ArrayList<>();
-    }
+//    public RandomizedSet() {
+//        hashMap =new HashMap<>();
+//               list = new ArrayList<>();
+//               return ;
+//    }
 
     public boolean insert(int val) {
         if(hashMap.containsKey(val)) return false;
