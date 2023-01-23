@@ -9,4 +9,9 @@ public class Best_Time_to_Buy_and_Sell_Stock_122 {
         }
         return max_profit;
     }
+
+    public static void main(String[] args) {
+        int min=Integer.MAX_VALUE;
+        System.out.println(min);
+    }
 }
