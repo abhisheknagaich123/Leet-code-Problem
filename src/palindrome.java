@@ -10,8 +10,8 @@ public class palindrome {
             left++;
             right--;
         }
-        else
-            return false;
+
+
     }
 
 }
