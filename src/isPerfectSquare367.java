@@ -1,10 +1,10 @@
 public class isPerfectSquare367 {
     public static void main(String[] args) {
-        int num=36;
+        int num=12;
         double n = Math.sqrt(num);
 
 
-//        System.out.println(n/int(n));
+       System.out.println(n);
         if(n/(int)n==1)
             System.out.println("true");
         else System.out.println("false");
