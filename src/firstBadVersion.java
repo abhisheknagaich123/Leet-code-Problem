@@ -1,4 +1,4 @@
-//public class firstBadVersion {
+public class firstBadVersion {
 //    public int firstBadVersion(int n) {
 //        int left=0;
 //        int right= n;
@@ -16,4 +16,4 @@
 //        }
 //return ans;
 //    }
-//}
+}
