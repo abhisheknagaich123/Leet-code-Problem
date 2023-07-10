@@ -1,40 +1,42 @@
 import java.util.*;
 public class spiralOrder54 {
-    public List<Integer> spiralOrder(int[][] matrix) {
-       List<Integer>res=new ArrayList<>();
-       int row=matrix.length;
-        if (row==0)return res;
-       int col=matrix[0].length;
+    public static void main(String[] args) {
+        int [][]arr={{10,11,12,13},
+                     {20,21,22,23},
+                     {30,31,32,33}};
+//                     {40,41,42,43}};
+        int cmin=0;
+        int cmax=arr[0].length-1;
+        int rmax=arr.length-1;
+        int rmin=0;
+        int count=0;
+        int total= arr.length * arr[0].length;
+        while (total>count){
+            for (int i = cmin; i <=cmax && count<total ; i++) {
+                System.out.print(arr[rmin][i] +" ");
+                count++;
+            }
+            rmin++;
+            System.out.println();
 
-       int l=0,r=col-1,t=0,b=row-1 ,d=0;
-       while (l<=r && t<=b){
-           if ( d==0){
-               for (int i = l; i <=r ; i++) {
-                   res.add(matrix[t][i]);
-               }
-               d=1; t++;
-           }
-           if ( d==1){
-               for (int i = t; i <=b ; i++) {
-                   res.add(matrix[i][r]);
-               }
-               d=2; r--;
-           }
-           if ( d==2){
-               for (int i = r; i <=l ; i++) {
-                   res.add(matrix[b][i]);
-               }
-               d=3; b--;
-           }
-           if ( d==3){
-               for (int i = b; i <=t ; i++) {
-                   res.add(matrix[i][l]);
-               }
-               d=0; l++;
-           }
-       }
-       return res;
-
-
+            for (int i = rmin; i <=rmax &&count<total ; i++) {
+                System.out.print(arr[i][cmax]+" ");
+                count++;
+            }
+            cmax--;
+            System.out.println();
+            for (int i = cmax; i >=cmin &&count<total ; i--) {
+                System.out.print(arr[rmax][i]+" ");
+                count++;
+            }
+            rmax--;
+            System.out.println();
+            for (int i = rmax; i >=rmin &&count<total; i--) {
+                System.out.print(arr[i][cmin] +" ");
+                count++;
+            }
+            cmin++;
+            System.out.println();
+        }
     }
 }
