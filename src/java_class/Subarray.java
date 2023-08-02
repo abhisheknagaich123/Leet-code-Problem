@@ -4,15 +4,15 @@ public class Subarray {
     public static int solotion(int arr[],int target){
         int sum=0;
         int minlen=Integer.MAX_VALUE;
-        for (int ep =0,sp= 0; ep <arr.length ; ep++) {
-            sum=sum+arr[ep];
+        for (int endpoint =0,startpoint= 0; endpoint <arr.length ; endpoint++) {
+            sum=sum+arr[endpoint];
             while (sum>=target){
-                int len=ep-sp+1;
+                int len=endpoint-startpoint+1;
                 if (len<minlen){
                     minlen=len;
                 }
-                sum=sum-arr[sp];
-                sp++;
+                sum=sum-arr[startpoint];
+                startpoint++;
             }
 
         }
